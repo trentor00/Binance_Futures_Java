@@ -17,6 +17,10 @@ public class Income {
 
     private Long time;
 
+    private String info;
+
+    private Long tranId;
+
     public String getSymbol() {
         return symbol;
     }
@@ -57,10 +61,26 @@ public class Income {
         this.time = time;
     }
 
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public Long getTranId() {
+        return tranId;
+    }
+
+    public void setTranId(Long tranId) {
+        this.tranId = tranId;
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this, BinanceApiConstants.TO_STRING_BUILDER_STYLE).append("symbol", symbol)
                 .append("incomeType", incomeType).append("income", income).append("asset", asset).append("time", time)
-                .toString();
+                .append("info",info).append("tranId",tranId).toString();
     }
 }

@@ -17,6 +17,8 @@ public class MyTrade {
 
     private Boolean isMaker;
 
+    private Long id;
+
     private Long orderId;
 
     private BigDecimal price;
@@ -73,6 +75,14 @@ public class MyTrade {
 
     public void setIsMaker(Boolean isMaker) {
         this.isMaker = isMaker;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getOrderId() {
@@ -151,7 +161,7 @@ public class MyTrade {
     public String toString() {
         return new ToStringBuilder(this, BinanceApiConstants.TO_STRING_BUILDER_STYLE).append("isBuyer", isBuyer)
                 .append("commission", commission).append("commissionAsset", commissionAsset)
-                .append("counterPartyId", counterPartyId).append("isMaker", isMaker)
+                .append("counterPartyId", counterPartyId).append("isMaker", isMaker).append("id", id)
                 .append("orderId", orderId).append("price", price).append("qty", qty).append("quoteQty", quoteQty)
                 .append("realizedPnl", realizedPnl).append("side", side).append("positionSide", positionSide)
                 .append("symbol", symbol).append("time", time).toString();

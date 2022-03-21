@@ -1092,7 +1092,7 @@ class RestApiRequestImpl {
                 element.setCommission(item.getBigDecimal("commission"));
                 element.setCommissionAsset(item.getString("commissionAsset"));
                 element.setCounterPartyId(item.getLongOrDefault("counterPartyId", 0));
-                element.setOrderId(item.getLong("orderId"));
+                element.setId(item.getLong("id"));
                 element.setIsMaker(item.getBoolean("maker"));
                 element.setOrderId(item.getLong("orderId"));
                 element.setPrice(item.getBigDecimal("price"));
@@ -1131,6 +1131,8 @@ class RestApiRequestImpl {
                 element.setIncome(item.getBigDecimal("income"));
                 element.setAsset(item.getString("asset"));
                 element.setTime(item.getLong("time"));
+                element.setInfo(item.getString("info"));
+                element.setTranId(item.getLong("tranId"));
                 result.add(element);
             });
             return result;
